@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Skills</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, rgb(255,255,255), rgb(254,215,173));
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+
+            color: #252222;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .skills-section {
+            padding: 20px;
+        }
+        
+        .skill-category {
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .skill-category h2 {
+            cursor: pointer;
+            margin: 0;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border-radius: 5px;
+        }
+        
+        .skill-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 10px 0 0 0;
+            display: none; /* Initially hidden */
+        }
+        
+        .skill-list li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .skill-list li:last-child {
+            border-bottom: none;
+        }
+        .btn{
+            position: relative;
+            left: 50px;
+            top: 300px;
+            display: inline;
+            padding: 10px;
+            font-size: 1.5rem;
+            text-transform: capitalize;
+            border-radius: 7px;
+        }
+        .btn a{
+            text-decoration: none;
+            color: #262a29;
+            border-radius: 7px;
+        }
+        .btn a:hover{
+            background-color: #655f5f;
+            color: #fff;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Skills</h1>
+    </header>
+
+    <section class="skills-section">
+        <div class="skill-category">
+            <h2 onclick="toggleSkills('web-dev')">Web Development</h2>
+            <ul id="web-dev" class="skill-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+            </ul>
+        </div>
+
+        <div class="skill-category">
+            <h2 onclick="toggleSkills('data-science')">Data Science</h2>
+            <ul id="data-science" class="skill-list">
+                <li>Python</li>
+                <li>Machine Learning</li>
+                <li>Data Visualization</li>
+                <li>SQL</li>
+            </ul>
+        </div>
+    </section>
+    <div class="btn">
+        <a href="portfolio.html"><i class="fa-solid fa-arrow-left"></i>Back</a>
+    </div>
+
+    <script>
+        function toggleSkills(id) {
+    const skillList = document.getElementById(id);
+    if (skillList.style.display === "none" || skillList.style.display === "") {
+        skillList.style.display = "block";
+    } else {
+        skillList.style.display = "none";
+    }
+}
+    </script>
+</body>
+</html>
